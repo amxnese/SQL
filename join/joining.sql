@@ -32,7 +32,7 @@ SELECT
     e2.name AS manager_name
 FROM
     employees e1
-LEFT JOIN
+JOIN
     employees e2
 ON
     e1.manager_id = e2.id;
