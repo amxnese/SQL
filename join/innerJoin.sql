@@ -36,3 +36,29 @@ JOIN
     employees e2
 ON
     e1.manager_id = e2.id;
+
+
+-- joining multiple tables
+SELECT Customers.CustomerName, Orders.OrderDate, OrderDetails.ProductName
+FROM Customers c
+JOIN Orders o ON c.CustomerID = o.CustomerID
+JOIN OrderDetails od ON o.OrderID = od.OrderID;
+
+
+-- Compound join condition
+/*
+In SQL, a compound join condition is used to join two tables based on multiplecolumns. 
+This is useful when the relationship between the tables depends on more than one column. 
+Here’s an example of how to use a compound join condition in SQL:
+*/
+SELECT 
+    a.column1,
+    a.column2,
+    b.column3,
+    b.column4
+FROM 
+    table1 a
+JOIN 
+    table2 b
+ON 
+    a.column1 = b.column1 AND a.column2 = b.column2;
